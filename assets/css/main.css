@@ -440,54 +440,43 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Index Page
+# Static Hero Section
 --------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Fullscreen Hero Section
---------------------------------------------------------------*/
-.hero-fullscreen {
+.hero-static {
   width: 100%;
-  min-height: 100vh;
-  background: url("../img/hero-fullscreen-bg.jpg") center center;
+  min-height: 50vh;
+  background: url("../img/hero-fullscreen-bg.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   padding: 120px 0 60px;
 }
-
-.hero-fullscreen:before {
+.hero-static:before {
   content: "";
-  background: rgba(var(--color-white-rgb), 0.65);
+  background: rgba(var(--color-black-rgb), 0.60);
   position: absolute;
   inset: 0;
 }
 
-@media (min-width: 1365px) {
-  .hero-fullscreen {
-    background-attachment: fixed;
-  }
-}
-
-.hero-fullscreen h2 {
+.hero-static h2 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 300;
-  color: #000;
+  color: var(--color-white);
   font-family: var(--font-secondary);
 }
 
-.hero-fullscreen h2 span {
-  color: var(--color-primary);
+.hero-static h2 span {
+  color: var(--color-white);
 }
 
-.hero-fullscreen p {
-  color: #000;
+.hero-static p {
+  color: var(--color-white);
   margin: 0 0 30px 0;
   font-size: 20px;
   font-weight: 400;
 }
 
-.hero-fullscreen .btn-get-started {
+.hero-static .btn-get-started {
   font-size: 16px;
   font-weight: 400;
   display: inline-block;
@@ -499,11 +488,11 @@ section {
   font-family: var(--font-secondary);
 }
 
-.hero-fullscreen .btn-get-started:hover {
+.hero-static .btn-get-started:hover {
   background: rgba(var(--color-primary-rgb), 0.8);
 }
 
-.hero-fullscreen .btn-watch-video {
+.hero-static .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
   margin-left: 25px;
@@ -512,7 +501,7 @@ section {
   font-weight: 600;
 }
 
-.hero-fullscreen .btn-watch-video i {
+.hero-static .btn-watch-video i {
   color: var(--color-primary);
   font-size: 32px;
   transition: 0.3s;
@@ -520,31 +509,74 @@ section {
   margin-right: 8px;
 }
 
-.hero-fullscreen .btn-watch-video:hover {
+.hero-static .btn-watch-video:hover {
   color: var(--color-primary);
 }
 
-.hero-fullscreen .btn-watch-video:hover i {
+.hero-static .btn-watch-video:hover i {
   color: rgba(var(--color-primary-rgb), 0.8);
 }
 
 @media (max-width: 640px) {
-  .hero-fullscreen h2 {
+  .hero-static h2 {
     font-size: 32px;
   }
 
-  .hero-fullscreen p {
+  .hero-static p {
     font-size: 18px;
     margin-bottom: 30px;
   }
 
-  .hero-fullscreen .btn-get-started,
-  .hero-fullscreen .btn-watch-video {
+  .hero-static .btn-get-started,
+  .hero-static .btn-watch-video {
     font-size: 14px;
   }
 }
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+.featured-services .service-item {
+  padding: 30px;
+  transition: all ease-in-out 0.4s;
+  background: var(--color-white);
+  height: 100%;
+}
 
+.featured-services .service-item .icon {
+  margin-bottom: 10px;
+}
 
+.featured-services .service-item .icon i {
+  color: var(--color-primary);
+  font-size: 36px;
+  transition: 0.3s;
+}
+
+.featured-services .service-item h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.featured-services .service-item h4 a {
+  color: var(--color-secondary);
+  transition: ease-in-out 0.3s;
+}
+
+.featured-services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.featured-services .service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0 60px 0 rgba(var(--color-secondary-rgb), 0.1);
+}
+
+.featured-services .service-item:hover h4 a {
+  color: var(--color-primary);
+}
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
